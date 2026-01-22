@@ -1,0 +1,24 @@
+.about {
+  padding: 5rem 2rem;
+  background-color: white;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
