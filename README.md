@@ -1,28 +1,90 @@
-# Landing Page - Proyecto de Emprendimiento
+# Coffee Winey Varsovia S.A.S.
 
-Landing page moderna y responsive construida con React, TypeScript y Vite. Lista para desplegar en GitHub Pages.
+Landing page profesional para proyecto de café especial presentado al Fondo Emprender SENA.
 
-## Características
+## Sobre el Proyecto
 
-- Diseño moderno y profesional
+**Coffee Winey Varsovia S.A.S.** es un emprendimiento dedicado a la producción de café especial con perfil winey en Isnos, Huila. Implementamos agricultura regenerativa y procesos de fermentación controlada desarrollados durante más de 6 años de investigación.
+
+## Características de la Landing Page
+
+- Diseño profesional enfocado en el sector cafetero
 - Totalmente responsive (mobile-first)
 - Construido con React 19 y TypeScript
-- Componentes modulares y reutilizables
-- Estilos CSS modernos con gradientes y animaciones
-- Optimizado para producción con Vite
+- Optimizado para presentación a evaluadores del SENA
+- Secciones específicas para el pitch empresarial
+- Estilos temáticos con colores café y tierra
 
 ## Estructura del Proyecto
 
 ```
 src/
 ├── components/
-│   ├── Hero.tsx          # Sección principal con CTA
-│   ├── Features.tsx      # Características del producto/servicio
-│   ├── About.tsx         # Información sobre el emprendimiento
-│   └── Contact.tsx       # Formulario de contacto
-├── App.tsx               # Componente principal
-└── index.css             # Estilos globales
+│   ├── Hero.tsx              # Landing principal con información del proyecto
+│   ├── About.tsx             # Quiénes somos e información institucional
+│   ├── Features.tsx          # Agricultura Regenerativa (diferenciador clave)
+│   ├── CoffeeProfile.tsx     # Perfil sensorial del café winey
+│   ├── Process.tsx           # Proceso productivo detallado
+│   ├── Innovation.tsx        # Innovación tecnológica
+│   ├── Markets.tsx           # Clientes y mercados objetivo
+│   ├── SenaProject.tsx       # Proyecto empresarial para Fondo Emprender
+│   └── Contact.tsx           # Formulario de contacto y ubicación
+├── App.tsx                   # Componente principal
+└── index.css                 # Estilos globales
 ```
+
+## Contenido de las Secciones
+
+### 1. Inicio (Hero)
+- Nombre del emprendimiento
+- Eslogan: "Café especial del Macizo Colombiano con agricultura regenerativa"
+- Botones de navegación rápida
+
+### 2. Quiénes Somos
+- Historia del proyecto
+- Experiencia en investigación (6+ años)
+- Información institucional (SENA, Fondo Emprender)
+- Ubicación: Isnos, Huila
+
+### 3. Agricultura Regenerativa
+- Recuperación de suelos
+- Reducción de agroquímicos
+- Manejo eficiente del agua
+- Conservación ambiental
+- Cero deforestación
+- Reincorporación de pulpa
+
+### 4. Perfil del Café
+- Perfil sensorial winey (acidez, cuerpo, notas)
+- Parámetros de calidad (SCAA ≥88)
+- Variedades cultivadas
+
+### 5. Proceso Productivo
+- Recolección selectiva
+- Fermentación controlada (24-60 horas)
+- Secado especializado
+- Empaque sostenible
+
+### 6. Innovación Tecnológica
+- Variedades resistentes
+- Procesos diferenciados
+- Selección óptica
+- Trazabilidad
+
+### 7. Clientes y Mercados
+- Clientes actuales (SKN, Caravela, ECOM, etc.)
+- Mercados objetivo (USA, Alemania, Japón, etc.)
+
+### 8. Proyecto SENA
+- Objetivos del proyecto
+- Diferencial competitivo
+- Impacto ambiental y social
+- Métricas y apoyo institucional
+
+### 9. Contacto
+- Formulario de contacto
+- Información de ubicación
+- Datos del proyecto
 
 ## Desarrollo Local
 
