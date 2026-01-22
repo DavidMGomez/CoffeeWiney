@@ -1,0 +1,139 @@
+.coffee-profile {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #3e2723 0%, #5d4037 100%);
+  color: white;
+}
+
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.profile-intro {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+.profile-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #ffcc80;
+  text-align: center;
+}
+
+.sensory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.sensory-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.sensory-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sensory-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.sensory-label {
+  display: block;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.sensory-value {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffcc80;
+}
+
+.quality-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.quality-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quality-label {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.quality-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffcc80;
+}
+
+.varieties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.variety-card {
+  background: rgba(255, 204, 128, 0.2);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid rgba(255, 204, 128, 0.3);
+  transition: all 0.3s ease;
+}
+
+.variety-card:hover {
+  background: rgba(255, 204, 128, 0.3);
+  border-color: #ffcc80;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .sensory-grid,
+  .quality-grid,
+  .varieties-grid {
+    grid-template-columns: 1fr;
+  }
+}
