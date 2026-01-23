@@ -1,5 +1,6 @@
 import './Innovation.css';
 import { useEffect, useRef } from 'react';
+import { getImagePath } from '../utils/imagePaths';
 
 const Innovation = () => {
   const innovations = [
@@ -81,7 +82,7 @@ const Innovation = () => {
         </p>
 
         <div className="innovation-image-section">
-          <img src="/cafe.jpeg" alt="Granos de café especial seleccionados" />
+          <img src={getImagePath('cafe.jpeg')} alt="Granos de café especial seleccionados" />
         </div>
 
         <div className="innovation-grid">

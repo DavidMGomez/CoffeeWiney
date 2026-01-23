@@ -1,5 +1,6 @@
 import './Markets.css';
 import { useEffect, useRef } from 'react';
+import { getImagePath } from '../utils/imagePaths';
 
 const Markets = () => {
   const clients = [
@@ -95,7 +96,7 @@ const Markets = () => {
   return (
     <section className="markets" id="markets">
       <div className="markets-image-section">
-        <img src="/escogiendo-cafe.jpeg" alt="Proceso de selección y comercialización de café" />
+        <img src={getImagePath('escogiendo-cafe.jpeg')} alt="Proceso de selección y comercialización de café" />
       </div>
       <div className="markets-container">
         <h2 className="section-title" ref={titleRef}>Clientes y Mercados</h2>

@@ -1,5 +1,6 @@
 import './Contact.css';
 import { useEffect, useRef } from 'react';
+import { getImagePath } from '../utils/imagePaths';
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -57,7 +58,7 @@ const Contact = () => {
         </p>
 
         <div className="contact-image-section">
-          <img src="/finca.jpeg" alt="Finca Varsovia, Isnos - Huila" />
+          <img src={getImagePath('finca.jpeg')} alt="Finca Varsovia, Isnos - Huila" />
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit} ref={formRef}>

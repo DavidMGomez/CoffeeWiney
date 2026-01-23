@@ -1,5 +1,6 @@
 import './Features.css';
 import { useEffect, useRef } from 'react';
+import { getImagePath } from '../utils/imagePaths';
 
 const Features = () => {
   const practices = [
@@ -66,7 +67,7 @@ const Features = () => {
   return (
     <section className="features" id="regenerative">
       <div className="features-image-section">
-        <img src="/paisajecafetero.jpeg" alt="Paisaje cafetero del Macizo Colombiano" />
+        <img src={getImagePath('paisajecafetero.jpeg')} alt="Paisaje cafetero del Macizo Colombiano" />
       </div>
       <div className="features-intro">
         <h2 className="features-title" ref={titleRef} style={{ opacity: 0 }}>Agricultura Regenerativa</h2>

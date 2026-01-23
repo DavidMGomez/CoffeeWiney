@@ -1,5 +1,6 @@
 import './Process.css';
 import { useEffect, useRef } from 'react';
+import { getImagePath } from '../utils/imagePaths';
 
 const Process = () => {
   const processSteps = [
@@ -99,7 +100,7 @@ const Process = () => {
         </p>
 
         <div className="process-image-section">
-          <img src="/escogiendo-cafe.jpeg" alt="Proceso de selección de café" />
+          <img src={getImagePath('escogiendo-cafe.jpeg')} alt="Proceso de selección de café" />
         </div>
 
         <div className="process-grid">

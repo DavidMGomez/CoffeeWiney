@@ -1,5 +1,6 @@
 import './CoffeeProfile.css';
 import { useEffect, useRef } from 'react';
+import { getImagePath } from '../utils/imagePaths';
 
 const CoffeeProfile = () => {
   const sensoryProfile = [
@@ -83,7 +84,7 @@ const CoffeeProfile = () => {
             </p>
           </div>
           <div className="profile-image">
-            <img src="/cafe.jpeg" alt="Granos de café especial" />
+            <img src={getImagePath('cafe.jpeg')} alt="Granos de café especial" />
           </div>
         </div>
 

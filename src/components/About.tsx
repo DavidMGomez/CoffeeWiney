@@ -1,5 +1,6 @@
 import './About.css';
 import { useEffect, useRef } from 'react';
+import { getImagePath } from '../utils/imagePaths';
 
 const About = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -80,7 +81,7 @@ const About = () => {
             }}
             style={{ opacity: 0 }}
           >
-            <img src="/finca.jpeg" alt="Finca de café en Isnos, Huila" onError={(e) => { console.error('Error loading image:', e); }} />
+            <img src={getImagePath('finca.jpeg')} alt="Finca de café en Isnos, Huila" onError={(e) => { console.error('Error loading image:', e); }} />
           </div>
         </div>
 
