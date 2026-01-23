@@ -1,7 +1,7 @@
 .coffee-profile {
   padding: 6rem 2rem;
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
-  background-image: url('/escogiendo-cafe.jpeg');
+  background-image: var(--coffee-profile-bg-image, url('/escogiendo-cafe.jpeg'));
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
