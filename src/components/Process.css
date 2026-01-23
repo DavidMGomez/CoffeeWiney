@@ -1,6 +1,7 @@
 .process {
-  padding: 5rem 2rem;
-  background-color: #f8f5f0;
+  padding: 6rem 2rem;
+  background-color: #1a1a1a;
+  color: #ffffff;
 }
 
 .process-container {
@@ -9,20 +10,23 @@
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 1.5rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 2rem;
   text-align: center;
-  color: #3e2723;
-  font-weight: 700;
+  color: #ffffff;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .process-intro {
   max-width: 700px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 5rem;
   text-align: center;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #555;
+  font-size: 1.3rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 300;
 }
 
 .process-grid {
@@ -31,54 +35,101 @@
   gap: 2.5rem;
 }
 
+.process-image-section {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.process-image-section:hover {
+  transform: scale(1.02);
+}
+
+.process-image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .process-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   padding: 2.5rem;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 140, 66, 0.2);
+  display: flex;
+  flex-direction: column;
 }
 
 .process-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 40px rgba(255, 140, 66, 0.3);
+  border-color: rgba(255, 140, 66, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.process-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
 .process-number {
-  position: absolute;
-  top: -15px;
-  right: 20px;
-  background: linear-gradient(135deg, #5d4037 0%, #3e2723 100%);
-  color: white;
-  width: 40px;
-  height: 40px;
+  background: linear-gradient(135deg, #ff8c42 0%, #ff6b1a 100%);
+  color: #1a1a1a;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 1.2rem;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 800;
+  font-size: 1.4rem;
+  box-shadow: 0 5px 15px rgba(255, 140, 66, 0.4);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.process-card:hover .process-number {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .process-icon {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  text-align: center;
+  font-size: 3.5rem;
+  filter: drop-shadow(0 4px 8px rgba(255, 140, 66, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.process-card:hover .process-icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.process-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .process-title {
-  font-size: 1.6rem;
-  color: #3e2723;
-  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+  color: #ff8c42;
+  margin-bottom: 1rem;
   text-align: center;
   font-weight: 600;
 }
 
 .process-description {
-  font-size: 1rem;
-  color: #777;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
   text-align: center;
   margin-bottom: 1.5rem;
   font-style: italic;
@@ -91,13 +142,19 @@
 }
 
 .process-details li {
-  padding: 0.7rem 0;
-  padding-left: 1.8rem;
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  padding: 0.8rem 0;
+  padding-left: 2rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  line-height: 1.7;
   position: relative;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: color 0.3s ease;
+}
+
+.process-details li:hover {
+  color: #ff8c42;
+  padding-left: 2.5rem;
 }
 
 .process-details li:last-child {
@@ -108,9 +165,9 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #4caf50;
+  color: #ff8c42;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {

@@ -1,4 +1,5 @@
 import './Contact.css';
+import { useEffect, useRef } from 'react';
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -7,16 +8,59 @@ const Contact = () => {
     alert('Gracias por tu interés. Te contactaremos pronto.');
   };
 
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const introRef = useRef<HTMLParagraphElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const infoRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('fade-in-up');
+            }, index * 150);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (titleRef.current) {
+      titleRef.current.style.opacity = '0';
+      observer.observe(titleRef.current);
+    }
+    if (introRef.current) {
+      introRef.current.style.opacity = '0';
+      observer.observe(introRef.current);
+    }
+    if (formRef.current) {
+      formRef.current.style.opacity = '0';
+      observer.observe(formRef.current);
+    }
+    if (infoRef.current) {
+      infoRef.current.style.opacity = '0';
+      observer.observe(infoRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="contact" id="contact">
       <div className="contact-content">
-        <h2>Contacto</h2>
-        <p className="contact-intro">
+        <h2 ref={titleRef}>Contacto</h2>
+        <p className="contact-intro" ref={introRef}>
           ¿Interesado en nuestro café especial? ¿Quieres conocer más sobre el proyecto?
           Déjanos tus datos y te contactaremos.
         </p>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <div className="contact-image-section">
+          <img src="/finca.jpeg" alt="Finca Varsovia, Isnos - Huila" />
+        </div>
+
+        <form className="contact-form" onSubmit={handleSubmit} ref={formRef}>
           <div className="form-row">
             <input
               type="text"
@@ -58,7 +102,7 @@ const Contact = () => {
           </button>
         </form>
 
-        <div className="contact-info">
+        <div className="contact-info" ref={infoRef}>
           <div className="info-item">
             <span className="info-icon">📍</span>
             <div>

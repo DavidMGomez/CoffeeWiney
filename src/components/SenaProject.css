@@ -1,12 +1,30 @@
 .sena-project {
-  padding: 5rem 2rem;
-  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 50%, #4caf50 100%);
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  background-image: url('/WhatsApp%20Image%202026-01-22%20at%207.10.39%20PM%20(1).jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: white;
+  position: relative;
+}
+
+.sena-project::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(45, 45, 45, 0.85) 50%, rgba(26, 26, 26, 0.9) 100%);
+  z-index: 1;
 }
 
 .sena-container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .sena-header {
@@ -15,16 +33,19 @@
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 2rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .sena-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   opacity: 0.95;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-weight: 300;
 }
 
 .project-highlights {
@@ -35,17 +56,19 @@
 }
 
 .highlight-card {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   padding: 2.5rem;
   border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, background 0.3s ease;
+  border: 1px solid rgba(255, 140, 66, 0.2);
+  transition: all 0.4s ease;
 }
 
 .highlight-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 140, 66, 0.5);
+  box-shadow: 0 15px 40px rgba(255, 140, 66, 0.3);
 }
 
 .highlight-icon {
@@ -55,10 +78,11 @@
 }
 
 .highlight-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
   text-align: center;
-  color: #ffeb3b;
+  color: #ff8c42;
+  font-weight: 600;
 }
 
 .highlight-card p {
@@ -77,10 +101,11 @@
 }
 
 .metrics-section h3 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-align: center;
   margin-bottom: 2.5rem;
-  color: #ffeb3b;
+  color: #ff8c42;
+  font-weight: 600;
 }
 
 .metrics-grid {
@@ -105,9 +130,65 @@
 }
 
 .metric-value {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #ffeb3b;
+  color: #ff8c42;
+}
+
+.investment-details {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 2px solid rgba(255, 140, 66, 0.3);
+}
+
+.investment-details h4 {
+  font-size: 1.8rem;
+  color: #ff8c42;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.investment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.investment-item {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid #ff8c42;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.investment-item:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.investment-item strong {
+  color: #ff8c42;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.investment-item span {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.investment-item small {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .support-section {
@@ -120,10 +201,11 @@
 }
 
 .support-section h3 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-align: center;
   margin-bottom: 2.5rem;
-  color: #ffeb3b;
+  color: #ff8c42;
+  font-weight: 600;
 }
 
 .support-content {
@@ -142,9 +224,10 @@
 }
 
 .support-item h4 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-bottom: 0.8rem;
-  color: #ffeb3b;
+  color: #ff8c42;
+  font-weight: 600;
 }
 
 .support-item p {
@@ -162,10 +245,11 @@
 }
 
 .location-section h3 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-align: center;
   margin-bottom: 2.5rem;
-  color: #ffeb3b;
+  color: #ff8c42;
+  font-weight: 600;
 }
 
 .location-content {
@@ -176,21 +260,23 @@
 }
 
 .location-info {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 12px;
-  border-left: 4px solid #ffeb3b;
+  border-left: 4px solid #ff8c42;
 }
 
 .location-info p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   margin-bottom: 0.8rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .location-info strong {
-  color: #ffeb3b;
+  color: #ff8c42;
   margin-right: 0.5rem;
+  font-weight: 600;
 }
 
 .location-description p {
