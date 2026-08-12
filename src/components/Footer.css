@@ -1,0 +1,42 @@
+.footer {
+  background: #1a1a1a;
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(255, 140, 66, 0.2);
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+.footer-sena-logo {
+  height: 90px;
+  width: auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.footer-text {
+  color: #e0e0e0;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.footer-copy {
+  color: #9a9a9a;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .footer-sena-logo {
+    height: 70px;
+  }
+}

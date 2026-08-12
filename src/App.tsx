@@ -10,6 +10,7 @@ import Innovation from './components/Innovation'
 import Markets from './components/Markets'
 import SenaProject from './components/SenaProject'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import { getImagePath } from './utils/imagePaths'
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <Markets />
       <SenaProject />
       <Contact />
+      <Footer />
     </div>
   )
 }

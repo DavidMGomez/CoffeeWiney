@@ -1,6 +1,5 @@
 import './SenaProject.css';
 import { useEffect, useRef } from 'react';
-import { getImagePath } from '../utils/imagePaths';
 
 const SenaProject = () => {
   const projectHighlights = [
@@ -90,11 +89,6 @@ const SenaProject = () => {
     <section className="sena-project" id="proyecto-sena">
       <div className="sena-container">
         <div className="sena-header">
-          <img
-            className="sena-logo"
-            src={getImagePath('sena-fondo-emprender-2024-seeklogo.png')}
-            alt="Fondo Emprender SENA"
-          />
           <h2 className="section-title" ref={titleRef}>Proyecto Empresarial - Fondo Emprender SENA</h2>
           <p className="sena-subtitle" ref={subtitleRef}>
             Coffee Winey Varsovia S.A.S. - Producción de Café Especial con Agricultura Regenerativa

@@ -36,6 +36,22 @@
   transform: scale(1.05);
 }
 
+.sena-header-logo {
+  height: 48px;
+  width: auto;
+  margin-left: 1.25rem;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.sena-header-logo:hover {
+  transform: scale(1.05);
+}
+
 .logo-icon {
   font-size: 2rem;
   filter: drop-shadow(0 2px 4px rgba(255, 140, 66, 0.3));
@@ -180,6 +196,11 @@
 
   .header-container {
     padding: 1rem 1.5rem;
+  }
+
+  .sena-header-logo {
+    height: 38px;
+    margin-left: 0.75rem;
   }
 }
 

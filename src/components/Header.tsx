@@ -1,5 +1,6 @@
 import './Header.css';
 import { useEffect, useState } from 'react';
+import { getImagePath } from '../utils/imagePaths';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,6 +37,12 @@ const Header = () => {
             <span className="logo-sub">VARSOVIA S.A.S.</span>
           </span>
         </div>
+        <img
+          className="sena-header-logo"
+          src={getImagePath('sena-fondo-emprender-2024-seeklogo.png')}
+          alt="Fondo Emprender SENA"
+          onClick={scrollToTop}
+        />
         <nav className={`nav-menu ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
           <button className="nav-link" onClick={() => scrollToTop()}>
             INICIO
