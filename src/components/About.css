@@ -1,22 +1,37 @@
 .about {
-  padding: 6rem 2rem;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  padding: var(--section-padding);
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 .about-content {
-  max-width: 1200px;
+  max-width: var(--container);
   margin: 0 auto;
 }
 
 .about h2 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  margin-bottom: 4rem;
-  color: #ffffff;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  margin-bottom: 3.5rem;
+  color: var(--color-text);
   text-align: center;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  line-height: 1.15;
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+
+.about h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
 }
 
 .about-main {
@@ -35,10 +50,11 @@
 
 .about-image {
   position: relative;
-  border-radius: 15px;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--ease);
+  aspect-ratio: 4 / 3;
 }
 
 .about-image:hover {
@@ -148,10 +164,15 @@
 }
 
 .info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
+}
+
+.info-grid > .info-card {
+  flex: 0 1 300px;
 }
 
 .info-card {

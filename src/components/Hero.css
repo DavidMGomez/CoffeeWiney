@@ -10,8 +10,7 @@
   background-attachment: fixed;
   color: white;
   text-align: center;
-  padding: 2rem;
-  padding-top: 6rem;
+  padding: 7rem var(--section-padding-x) 4rem;
   position: relative;
   overflow: hidden;
 }

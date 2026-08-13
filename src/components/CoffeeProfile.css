@@ -1,6 +1,6 @@
 .coffee-profile {
-  padding: 6rem 2rem;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  padding: var(--section-padding);
+  background: var(--gradient-diagonal);
   background-image: var(--coffee-profile-bg-image, url('/escogiendo-cafe.jpeg'));
   background-size: cover;
   background-position: center;
@@ -21,19 +21,34 @@
 }
 
 .profile-container {
-  max-width: 1200px;
+  max-width: var(--container);
   margin: 0 auto;
   position: relative;
   z-index: 2;
 }
 
 .section-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  margin-bottom: 3rem;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  margin-bottom: 2.5rem;
   text-align: center;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  line-height: 1.15;
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
 }
 
 .profile-main {
@@ -57,10 +72,11 @@
 }
 
 .profile-image {
-  border-radius: 15px;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--ease);
+  aspect-ratio: 4 / 3;
 }
 
 .profile-image:hover {
@@ -99,9 +115,14 @@
 }
 
 .sensory-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
+}
+
+.sensory-grid > .sensory-card {
+  flex: 0 1 180px;
 }
 
 .sensory-card {
@@ -143,9 +164,14 @@
 }
 
 .quality-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
+}
+
+.quality-grid > .quality-item {
+  flex: 0 1 240px;
 }
 
 .quality-item {
@@ -186,9 +212,14 @@
 }
 
 .varieties-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
+}
+
+.varieties-grid > .variety-card {
+  flex: 0 1 240px;
 }
 
 .variety-card {

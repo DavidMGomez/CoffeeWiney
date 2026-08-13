@@ -1,6 +1,6 @@
 .sena-project {
-  padding: 6rem 2rem;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  padding: var(--section-padding);
+  background: var(--gradient-diagonal);
   background-image: url('/WhatsApp%20Image%202026-01-22%20at%207.10.39%20PM%20(1).jpeg');
   background-size: cover;
   background-position: center;
@@ -21,7 +21,7 @@
 }
 
 .sena-container {
-  max-width: 1200px;
+  max-width: var(--container);
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -33,12 +33,29 @@
 }
 
 .section-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  margin-bottom: 2rem;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  color: var(--color-text);
   font-weight: 800;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  line-height: 1.15;
+  position: relative;
+  padding-bottom: 1.25rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
 }
 
 .sena-subtitle {
@@ -49,10 +66,15 @@
 }
 
 .project-highlights {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   margin-bottom: 4rem;
+}
+
+.project-highlights > .highlight-card {
+  flex: 0 1 320px;
 }
 
 .highlight-card {
@@ -109,9 +131,14 @@
 }
 
 .metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
+}
+
+.metrics-grid > .metric-card {
+  flex: 0 1 260px;
 }
 
 .metric-card {
@@ -150,9 +177,14 @@
 }
 
 .investment-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
+}
+
+.investment-grid > .investment-item {
+  flex: 0 1 300px;
 }
 
 .investment-item {
@@ -209,9 +241,14 @@
 }
 
 .support-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
+}
+
+.support-content > .support-item {
+  flex: 0 1 260px;
 }
 
 .support-item {
