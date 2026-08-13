@@ -81,7 +81,7 @@ const About = () => {
             }}
             style={{ opacity: 0 }}
           >
-            <img src={getImagePath('finca.jpeg')} alt="Finca de café en Isnos, Huila" onError={(e) => { console.error('Error loading image:', e); }} />
+            <img src={getImagePath('imagenes-propias/fundadora.jpeg')} alt="Fundadora de Coffee Winey Varsovia en el cafetal, Isnos - Huila" onError={(e) => { console.error('Error loading image:', e); }} />
           </div>
         </div>
 

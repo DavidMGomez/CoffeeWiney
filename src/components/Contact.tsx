@@ -58,7 +58,7 @@ const Contact = () => {
         </p>
 
         <div className="contact-image-section">
-          <img src={getImagePath('finca.jpeg')} alt="Finca Varsovia, Isnos - Huila" />
+          <img src={getImagePath('imagenes-propias/finca.jpeg')} alt="Finca Varsovia, Isnos - Huila" />
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit} ref={formRef}>
@@ -118,6 +118,10 @@ const Contact = () => {
               <p>Fondo Emprender SENA</p>
             </div>
           </div>
+        </div>
+
+        <div className="contact-poster">
+          <img src={getImagePath('imagenes-propias/poster-info-coffee-winey.jpeg')} alt="Coffee Winey Varsovia S.A.S. - Información de contacto: Vereda Alto Mondeyal, WhatsApp 3124105662, @coffeewineyvarsovia" />
         </div>
       </div>
     </section>

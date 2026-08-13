@@ -100,7 +100,7 @@ const Process = () => {
         </p>
 
         <div className="process-image-section">
-          <img src={getImagePath('escogiendo-cafe.jpeg')} alt="Proceso de selección de café" />
+          <img src={getImagePath('imagenes-propias/cafe-producto.jpeg')} alt="Secado del café en marquesina - Finca Varsovia" />
         </div>
 
         <div className="process-grid">

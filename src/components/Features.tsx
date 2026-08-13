@@ -67,7 +67,7 @@ const Features = () => {
   return (
     <section className="features" id="regenerative">
       <div className="features-image-section">
-        <img src={getImagePath('paisajecafetero.jpeg')} alt="Paisaje cafetero del Macizo Colombiano" />
+        <img src={getImagePath('imagenes-propias/finca-fundadora.jpeg')} alt="Fundadora en la finca con cultivos diversos y agricultura regenerativa" />
       </div>
       <div className="features-intro">
         <h2 className="features-title" ref={titleRef} style={{ opacity: 0 }}>Agricultura Regenerativa</h2>
